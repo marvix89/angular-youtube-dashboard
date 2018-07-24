@@ -1,0 +1,13 @@
+<div class="grid-container">
+    <h1 class="mat-h1">Videos</h1>
+    <ng-container *ngFor="let card of cards">
+        <div class="col-md-4">
+          <app-card-item  [element]="card"></app-card-item> 
+        </div>
+    <div class="row" *ngIf=" cards.indexOf(card)%3 == 2" >
+      <div class="col-md-12">
+         <hr />
+      </div>
+    </div>
+</ng-container>
+</div>
